@@ -1,13 +1,13 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: chemicalplant2
+  name: chemicalplant23
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: best-effort-small
-  imageName: ent.box.com/shared/static/91o0wfc5ad2c0cgrmoraqwknd1dtwxei.ova
+  imageName: ent.box.com/shared/static/91o0wfc5ad2c0cgrmoraqwknd1dtwxei.ovag
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
