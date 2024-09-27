@@ -27,3 +27,5 @@ This repository allows users to practice setting up and interacting with a simpl
 7. Access `node-red` service, it should be available within the address range you specified at step 2 at port 1880 e.g. http://192.168.50.240:1880
 8. You can refer preconfigured flow into node-red by importing `sample_flow.json` provided in the same repository
 9. enjoy!
+
+![image](https://github.com/user-attachments/assets/1671ef0b-a1d6-4e59-ac58-1b275246e5fa)
