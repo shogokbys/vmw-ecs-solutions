@@ -28,4 +28,5 @@ This repository allows users to practice setting up and interacting with a simpl
 8. You can refer preconfigured flow into node-red by importing `sample_flow.json` provided in the same repository
 9. enjoy!
 
-![image](https://github.com/user-attachments/assets/1671ef0b-a1d6-4e59-ac58-1b275246e5fa)
+![image](https://github.com/user-attachments/assets/9c3070f8-86cf-42b2-b5e4-c07fb00e9415)
+
