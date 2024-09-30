@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: iot
+  name: opc-ua
 ---
 apiVersion: v1
 kind: Service
