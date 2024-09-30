@@ -25,7 +25,7 @@ This repository allows users to practice setting up and interacting with a simpl
 5. Login to `chemicalplant` VM via console
 6. Update network settings to align with your environment
 7. Access `node-red` service, it should be available within the address range you specified at step 2 at port 1880 e.g. http://192.168.50.240:1880
-8. You can refer preconfigured flow into node-red by importing `sample_flow.json` provided in the same repository
+8. You can refer preconfigured flow into node-red by importing `sample_flow.json` provided in the same repository. You will most likely need to change the ip address within the sample flow.
 9. enjoy!
 
 ![image](https://github.com/user-attachments/assets/b4c0b423-214a-4419-a2a2-3f2c231a8696)
