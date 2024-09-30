@@ -8,8 +8,7 @@ metadata:
 spec:
   className: best-effort-large
   #http or https location of OVA without the prefix:
-  #imageName: storage.googleapis.com/bucket-ecs-jp/WIN10jp.ova
-  imageName: ent.box.com/shared/static/1gzker1h0m1z22w54ms8f9mm0sxzqymh.ova
+  imageName: ent.box.com/shared/static/xxxxxxx.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
