@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: opc-ua
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: opc-ua
+  name: opc-ua
+  namespace: opc-ua
+spec:
+  ports:
+    - name: "4840"
+      port: 4840
+      protocol: TCP
+      targetPort: 4840
+  selector:
+    app: opc-ua
+  sessionAffinity: None
+  type: LoadBalancer
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: opc-ua
+  name: opc-ua
+  namespace: opc-ua
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: opc-ua
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: opc-ua
+    spec:
+      containers:
+        - image: shogokobayashi/freeopcua-server-minimal
+          imagePullPolicy: Always
+          name: opc-ua
+          ports:
+            - containerPort: 4840
+              protocol: TCP
+          resources: {}
+          env:
+            - name: TZ
+              value: Asia/Tokyo
+            - name: PGID
+              value: "1000"
+            - name: PUID
+              value: "1000"
