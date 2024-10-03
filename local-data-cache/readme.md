@@ -29,3 +29,5 @@ Simulating real-world operational technology scenarios that onsite operators dea
 9. enjoy!
 
 ![image](https://github.com/user-attachments/assets/f8d24918-d1cd-4908-bf8c-b4657622af96)
+
+![image](https://github.com/user-attachments/assets/d4bb0cc3-b1a2-4870-98ab-714910e18aed)
