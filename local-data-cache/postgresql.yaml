@@ -67,11 +67,11 @@ spec:
               protocol: TCP
           volumeMounts:
             - mountPath: /bitnami/postgresql
-              name: postgresql-pv
+              name: postgre-pv
       volumes:
-        - name: postgresql-pv
+        - name: postgre-pv
           persistentVolumeClaim:
-            claimName: postgresql-pvc
+            claimName: postgre-pvc
 
 ---
 apiVersion: v1
