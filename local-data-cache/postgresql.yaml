@@ -36,7 +36,7 @@ spec:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: create-customtable-configmap
+  name: create-customtable-cm
   namespace: db
 data:
   create_table.sql: |
