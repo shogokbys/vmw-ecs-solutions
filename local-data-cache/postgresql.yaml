@@ -39,7 +39,7 @@ metadata:
   name: create-customtable-cm
   namespace: db
 data:
-  create_table.sql: |
+  create_table.sql: |+
     CREATE TABLE book (
        id integer PRIMARY KEY,
        name VARCHAR(255)
