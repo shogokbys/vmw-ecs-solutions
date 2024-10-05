@@ -43,11 +43,11 @@ data:
     CREATE TABLE devicestatus (
        id SERIAL NOT NULL,
        devicename VARCHAR(255) NOT NULL,
-       devicevalue INTEGER NOT NULL,
+       devicevalue DECIMAL NOT NULL,
        timestamp TIMESTAMP NOT NULL DEFAULT NOW()
     );
-    INSERT INTO devicestatus VALUES('device-a',150);
-    INSERT INTO devicestatus VALUES('device-b',300);
+    INSERT INTO devicestatus (devicename, devicevalue) VALUES ('device-a', 150);
+    INSERT INTO devicestatus (devicename, devicevalue) VALUES ('device-b', 0.98);
 
 ---
 apiVersion: apps/v1
