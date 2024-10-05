@@ -87,8 +87,18 @@ spec:
             - mountPath: /bitnami/postgresql
               name: postgre-pv
             - mountPath: /docker-entrypoint-initdb.d
-              name: create-customtable-cm
-
+              name: create-customtable
+      volumes:
+        - name: grafana-pv
+          persistentVolumeClaim:
+            claimName: postgre-pvc
+        - name: create-customtable
+          configMap:
+            name: create-customtable-cm
+            items:
+            - key: create_table.sql
+              path: create_table.sql
+          
 ---
 apiVersion: v1
 kind: Service
