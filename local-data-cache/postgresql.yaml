@@ -47,6 +47,7 @@ data:
     );
     INSERT INTO book VALUES(1, 'aaa');
     INSERT INTO book VALUES(2, 'bbb');
+    INSERT INTO book VALUES(3, 'ccc');
 ---
 
 apiVersion: apps/v1
@@ -54,7 +55,7 @@ kind: Deployment
 metadata:
   labels:
     app: posgresql
-    version: "v0.0.1"
+    version: "v0.0.2"
   name: postgresql
   namespace: db
 spec:
@@ -65,7 +66,7 @@ spec:
     metadata:
       labels:
         app: postgresql
-        version: "v0.0.1"
+        version: "v0.0.2"
     spec:
       securityContext:
         runAsUser: 0
