@@ -40,13 +40,14 @@ metadata:
   namespace: db
 data:
   create_table.sql: |
-    CREATE TABLE book (
-       id integer PRIMARY KEY,
-       name VARCHAR(255)
+    CREATE TABLE devicestatus (
+       id SERIAL NOT NULL,
+       devicename VARCHAR(255) NOT NULL,
+       devicevalue INTEGER NOT NULL,
+       timestamp TIMESTAMP NOT NULL DEFAULT NOW()
     );
-    INSERT INTO book VALUES(1, 'aaa');
-    INSERT INTO book VALUES(2, 'bbb');
-    INSERT INTO book VALUES(3, 'ccc');
+    INSERT INTO devicestatus VALUES('device-a',150);
+    INSERT INTO devicestatus VALUES('device-b',300);
 
 ---
 apiVersion: apps/v1
@@ -54,7 +55,7 @@ kind: Deployment
 metadata:
   labels:
     app: posgresql
-    version: "v0.0.2"
+    version: "v0.0.3"
   name: postgresql
   namespace: db
 spec:
@@ -65,7 +66,7 @@ spec:
     metadata:
       labels:
         app: postgresql
-        version: "v0.0.2"
+        version: "v0.0.3"
     spec:
       securityContext:
         runAsUser: 0
