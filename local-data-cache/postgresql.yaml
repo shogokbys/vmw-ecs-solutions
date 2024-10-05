@@ -37,10 +37,11 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: create-customtable-configmap
+  namespace: db
 data:
   create_table.sql: |
     -- create_table.sql
-    CREATE TABLE bookshelf (
+    CREATE TABLE book (
        id integer PRIMARY KEY,
        name VARCHAR(255)
     );
