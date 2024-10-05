@@ -33,21 +33,6 @@ spec:
       storage: 4Gi
 
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: create-customtable-cm
-  namespace: db
-data:
-  create_table.sql: |+
-    CREATE TABLE book (
-       id integer PRIMARY KEY,
-       name VARCHAR(255)
-    );
-    INSERT INTO book VALUES(1, 'aaa');
-    INSERT INTO book VALUES(2, 'bbb');
-    INSERT INTO book VALUES(3, 'ccc');
----
 
 apiVersion: apps/v1
 kind: Deployment
