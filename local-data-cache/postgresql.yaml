@@ -33,6 +33,21 @@ spec:
       storage: 4Gi
 
 ---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: create-customtable-configmap
+data:
+  create_table.sql: |
+    -- create_table.sql
+    CREATE TABLE bookshelf (
+       id integer PRIMARY KEY,
+       name VARCHAR(255)
+    );
+    INSERT INTO book VALUES(1, 'aaa');
+    INSERT INTO book VALUES(2, 'bbb');
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -68,10 +83,8 @@ spec:
           volumeMounts:
             - mountPath: /bitnami/postgresql
               name: postgre-pv
-      volumes:
-        - name: postgre-pv
-          persistentVolumeClaim:
-            claimName: postgre-pvc
+            - mountPath: /docker-entrypoint-initdb.d
+              name: create-customtable-cm
 
 ---
 apiVersion: v1
