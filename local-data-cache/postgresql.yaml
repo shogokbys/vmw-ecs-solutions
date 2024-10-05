@@ -89,7 +89,7 @@ spec:
             - mountPath: /docker-entrypoint-initdb.d
               name: create-customtable
       volumes:
-        - name: grafana-pv
+        - name: postgre-pv
           persistentVolumeClaim:
             claimName: postgre-pvc
         - name: create-customtable
