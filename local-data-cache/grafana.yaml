@@ -29,8 +29,8 @@ metadata:
     app: grafana
 data:
   grafana.ini: |+
-    [auth]
-    disable_login_form = true
+    # [auth]
+    # disable_login_form = true
 
     [auth.anonymous]
     enabled = true
@@ -1779,7 +1779,8 @@ kind: Deployment
 metadata:
   labels:
     app: grafana
-  name: grafana
+    version: "v0.0.1"
+  name: grafana-test
   namespace: system-monitor
 spec:
   selector:
@@ -1789,6 +1790,7 @@ spec:
     metadata:
       labels:
         app: grafana
+        version: "v0.0.1"
     spec:
       securityContext:
         runAsUser: 0
