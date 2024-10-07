@@ -43,6 +43,7 @@ data:
     deleteDatasources:
       - name: Prometheus
         orgId: 1
+      - name: Postgres
     datasources:
       - name: prometheusServer
         type: prometheus
@@ -64,7 +65,7 @@ data:
         version: 1
         editable: true
         uid: P9F5AD67F23B4D992
-      - name: Postgres
+      - name: postgresServer
         type: postgres
         url: postgresql.db.svc.cluster.local:5432
         user: ecs_user
@@ -79,6 +80,7 @@ data:
           connMaxLifetime: 14400 # Grafana v5.4+
           postgresVersion: 903 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
           timescaledb: true
+        uid: ae03peeo1vrwga
   dashboards.yml: |+
     apiVersion: 1
     providers:
