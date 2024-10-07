@@ -89,7 +89,7 @@ data:
           disableDeletion: true
           editable: true
           options:
-            path: /etc/grafana/dashboard.json
+            path: /etc/grafana/dashboards
   dashboard.json: |+
     {
       "annotations": {
@@ -1774,6 +1774,362 @@ data:
       "version": 1,
       "weekStart": ""
     }
+  
+  dashboard_iot.json: |+
+    {
+      "annotations": {
+            "list": [
+              {
+                "builtIn": 1,
+                "datasource": {
+                  "type": "grafana",
+                  "uid": "-- Grafana --"
+                },
+                "enable": true,
+                "hide": true,
+                "iconColor": "rgba(0, 211, 255, 1)",
+                "name": "Annotations & Alerts",
+                "type": "dashboard"
+              }
+            ]
+          },
+          "editable": true,
+          "fiscalYearStartMonth": 0,
+          "graphTooltip": 0,
+          "id": 2,
+          "links": [],
+          "panels": [
+            {
+              "datasource": {
+                "default": false,
+                "type": "Postgres",
+                "uid": "ae03peeo1vrwga"
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "mappings": [],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 0,
+                "y": 0
+              },
+              "id": 1,
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "mode": "single",
+                  "sort": "none"
+                }
+              },
+              "targets": [
+                {
+                  "datasource": {
+                    "type": "Postgres",
+                    "uid": "ae03peeo1vrwga"
+                  },
+                  "editorMode": "code",
+                  "format": "table",
+                  "rawQuery": true,
+                  "rawSql": "SELECT devicevalue, \"timestamp\" FROM devicestatus WHERE devicename = 'tempsensor' LIMIT 500",
+                  "refId": "A",
+                  "sql": {
+                    "columns": [
+                      {
+                        "parameters": [
+                          {
+                            "name": "devicevalue",
+                            "type": "functionParameter"
+                          }
+                        ],
+                        "type": "function"
+                      },
+                      {
+                        "parameters": [
+                          {
+                            "name": "\"timestamp\"",
+                            "type": "functionParameter"
+                          }
+                        ],
+                        "type": "function"
+                      }
+                    ],
+                    "groupBy": [
+                      {
+                        "property": {
+                          "type": "string"
+                        },
+                        "type": "groupBy"
+                      }
+                    ],
+                    "limit": 50,
+                    "whereJsonTree": {
+                      "children1": [
+                        {
+                          "id": "abab9a9b-cdef-4012-b456-71926474495a",
+                          "properties": {
+                            "field": "devicename",
+                            "fieldSrc": "field",
+                            "operator": "equal",
+                            "value": [
+                              "tempsensor"
+                            ],
+                            "valueError": [
+                              null
+                            ],
+                            "valueSrc": [
+                              "value"
+                            ],
+                            "valueType": [
+                              "text"
+                            ]
+                          },
+                          "type": "rule"
+                        }
+                      ],
+                      "id": "bb88aa8b-0123-4456-b89a-b192644dadca",
+                      "type": "group"
+                    },
+                    "whereString": "devicename = 'tempsensor'"
+                  },
+                  "table": "devicestatus"
+                }
+              ],
+              "title": "TemperatureSensor",
+              "type": "timeseries"
+            },
+            {
+              "datasource": {
+                "default": false,
+                "type": "Postgres",
+                "uid": "ae03peeo1vrwga"
+              },
+              "fieldConfig": {
+                "defaults": {
+                  "color": {
+                    "mode": "palette-classic"
+                  },
+                  "custom": {
+                    "axisBorderShow": false,
+                    "axisCenteredZero": false,
+                    "axisColorMode": "text",
+                    "axisLabel": "",
+                    "axisPlacement": "auto",
+                    "barAlignment": 0,
+                    "barWidthFactor": 0.6,
+                    "drawStyle": "line",
+                    "fillOpacity": 0,
+                    "gradientMode": "none",
+                    "hideFrom": {
+                      "legend": false,
+                      "tooltip": false,
+                      "viz": false
+                    },
+                    "insertNulls": false,
+                    "lineInterpolation": "linear",
+                    "lineWidth": 1,
+                    "pointSize": 5,
+                    "scaleDistribution": {
+                      "type": "linear"
+                    },
+                    "showPoints": "auto",
+                    "spanNulls": false,
+                    "stacking": {
+                      "group": "A",
+                      "mode": "none"
+                    },
+                    "thresholdsStyle": {
+                      "mode": "off"
+                    }
+                  },
+                  "mappings": [],
+                  "thresholds": {
+                    "mode": "absolute",
+                    "steps": [
+                      {
+                        "color": "green",
+                        "value": null
+                      },
+                      {
+                        "color": "red",
+                        "value": 80
+                      }
+                    ]
+                  }
+                },
+                "overrides": []
+              },
+              "gridPos": {
+                "h": 8,
+                "w": 12,
+                "x": 12,
+                "y": 0
+              },
+              "id": 2,
+              "options": {
+                "legend": {
+                  "calcs": [],
+                  "displayMode": "list",
+                  "placement": "bottom",
+                  "showLegend": true
+                },
+                "tooltip": {
+                  "mode": "single",
+                  "sort": "none"
+                }
+              },
+              "targets": [
+                {
+                  "datasource": {
+                    "type": "Postgres",
+                    "uid": "ae03peeo1vrwga"
+                  },
+                  "editorMode": "code",
+                  "format": "table",
+                  "rawQuery": true,
+                  "rawSql": "SELECT devicevalue, \"timestamp\" FROM devicestatus WHERE devicename = 'pressuresensor' LIMIT 500",
+                  "refId": "A",
+                  "sql": {
+                    "columns": [
+                      {
+                        "parameters": [
+                          {
+                            "name": "devicevalue",
+                            "type": "functionParameter"
+                          }
+                        ],
+                        "type": "function"
+                      },
+                      {
+                        "parameters": [
+                          {
+                            "name": "\"timestamp\"",
+                            "type": "functionParameter"
+                          }
+                        ],
+                        "type": "function"
+                      }
+                    ],
+                    "groupBy": [
+                      {
+                        "property": {
+                          "type": "string"
+                        },
+                        "type": "groupBy"
+                      }
+                    ],
+                    "limit": 50,
+                    "whereJsonTree": {
+                      "children1": [
+                        {
+                          "id": "abab9a9b-cdef-4012-b456-71926474495a",
+                          "properties": {
+                            "field": "devicename",
+                            "fieldSrc": "field",
+                            "operator": "equal",
+                            "value": [
+                              "tempsensor"
+                            ],
+                            "valueError": [
+                              null
+                            ],
+                            "valueSrc": [
+                              "value"
+                            ],
+                            "valueType": [
+                              "text"
+                            ]
+                          },
+                          "type": "rule"
+                        }
+                      ],
+                      "id": "bb88aa8b-0123-4456-b89a-b192644dadca",
+                      "type": "group"
+                    },
+                    "whereString": "devicename = 'tempsensor'"
+                  },
+                  "table": "devicestatus"
+                }
+              ],
+              "title": "PressureSensor",
+              "type": "timeseries"
+            }
+          ],
+          "refresh": "1m",
+          "schemaVersion": 39,
+          "tags": [],
+          "templating": {
+            "list": []
+          },
+          "time": {
+            "from": "now-6h",
+            "to": "now"
+          },
+          "timepicker": {},
+          "timezone": "browser",
+          "title": "IoT Dashboard",
+          "uid": "ae03tjr7qggzkb",
+          "version": 1,
+          "weekStart": ""
+        }
+    }
 
 ---
 apiVersion: v1
@@ -1859,7 +2215,9 @@ spec:
             - key: dashboards.yml
               path: provisioning/dashboards/dashboards.yml
             - key: dashboard.json
-              path: dashboard.json
+              path: provisioning/dashboards/dashboard.json
+            - key: dashboard_iot.json
+              path: provisioning/dashboards/dashboard_iot.json
 ---
 apiVersion: v1
 kind: Service
