@@ -2150,7 +2150,7 @@ kind: Deployment
 metadata:
   labels:
     app: grafana
-    version: "v0.0.2"
+    version: "v0.0.5"
   name: grafana-test
   namespace: system-monitor
 spec:
@@ -2161,7 +2161,7 @@ spec:
     metadata:
       labels:
         app: grafana
-        version: "v0.0.2"
+        version: "v0.0.5"
     spec:
       securityContext:
         runAsUser: 0
