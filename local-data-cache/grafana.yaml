@@ -1802,7 +1802,7 @@ data:
             {
               "datasource": {
                 "default": false,
-                "type": "Postgres",
+                "type": "postgres",
                 "uid": "ae03peeo1vrwga"
               },
               "fieldConfig": {
@@ -1882,7 +1882,7 @@ data:
               "targets": [
                 {
                   "datasource": {
-                    "type": "Postgres",
+                    "type": "postgres",
                     "uid": "ae03peeo1vrwga"
                   },
                   "editorMode": "code",
@@ -1958,7 +1958,7 @@ data:
             {
               "datasource": {
                 "default": false,
-                "type": "Postgres",
+                "type": "postgres",
                 "uid": "ae03peeo1vrwga"
               },
               "fieldConfig": {
@@ -2038,7 +2038,7 @@ data:
               "targets": [
                 {
                   "datasource": {
-                    "type": "Postgres",
+                    "type": "postgres",
                     "uid": "ae03peeo1vrwga"
                   },
                   "editorMode": "code",
