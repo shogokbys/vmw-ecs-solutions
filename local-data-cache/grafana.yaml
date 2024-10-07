@@ -64,6 +64,21 @@ data:
         version: 1
         editable: true
         uid: P9F5AD67F23B4D992
+      - name: Postgres
+        type: postgres
+        url: postgresql.db.svc.cluster.local:5432
+        user: ecs_user
+        secureJsonData:
+          password: 'VMware123'
+        jsonData:
+          database: monitoring_db
+          sslmode: 'disable' # disable/require/verify-ca/verify-full
+          maxOpenConns: 100 # Grafana v5.4+
+          maxIdleConns: 100 # Grafana v5.4+
+          maxIdleConnsAuto: true # Grafana v9.5.1+
+          connMaxLifetime: 14400 # Grafana v5.4+
+          postgresVersion: 903 # 903=9.3, 904=9.4, 905=9.5, 906=9.6, 1000=10
+          timescaledb: true
   dashboards.yml: |+
     apiVersion: 1
     providers:
@@ -1779,7 +1794,7 @@ kind: Deployment
 metadata:
   labels:
     app: grafana
-    version: "v0.0.1"
+    version: "v0.0.2"
   name: grafana-test
   namespace: system-monitor
 spec:
@@ -1790,7 +1805,7 @@ spec:
     metadata:
       labels:
         app: grafana
-        version: "v0.0.1"
+        version: "v0.0.2"
     spec:
       securityContext:
         runAsUser: 0
