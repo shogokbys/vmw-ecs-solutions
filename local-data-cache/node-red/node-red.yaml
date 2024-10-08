@@ -16,10 +16,11 @@ spec:
       port: 1880
       protocol: TCP
       targetPort: 1880
+      nodePort: 31880
   selector:
     app: node-red
   sessionAffinity: None
-  type: LoadBalancer
+  type: NodePort
 ---
 apiVersion: apps/v1
 kind: Deployment
