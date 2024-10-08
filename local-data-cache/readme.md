@@ -2,6 +2,9 @@
 This repository contains configuration files and sample flows designed to simulate a simple OT (Operational Technology) environment.
 The purpose is to provide hands-on experience with everyday tasks performed by an onsite operator, such as reading sensor values using Node-RED.
 
+# For End Users
+Youo can use this repository to quickly start visualizing OT in your factory without need of subscribing to external service to keep your data safe and agile. There's no need to install an operating system separately or configure services individually. Simply start using it and begin your digital transformation journey with an all-in-one solution.
+
 # Repository Contents
 * chemical-plant.yaml: Configuration files for the chemical plant simulator's virtual machine.
 * metallb.yaml: Kubernetes LoadBalancer configuration for exposing services.
