@@ -22,14 +22,12 @@ Simulating real-world operational technology scenarios that onsite operators dea
 
 # Getting Started
 1. Clone this repository
-2. Modify address allocation at the last line of metallb.yaml to align with your environment, this is used to expose node-red service available to you
-3. Configure VECO and ECS to use this path as a repository source
-4. Wait for all the components are deployed
-5. Login to chemicalplant VM via console
-6. Update network settings to align with your environment
-7. Access node-red service, it should be available within the address range you specified at step 2 at port 1880 e.g. http://192.168.50.240:1880
-8. You can refer preconfigured flow into node-red by importing sample_flow.json provided in the same repository. You will most likely need to change the ip address within the sample flow.
-9. enjoy!
+2. Configure VECO and ECS to use this path as a repository source
+3. Wait for all the components are deployed
+4. Login to chemicalplant VM via console * not necessary if you demo only opc-ua
+5. Update network settings to align with your environment * not necessary if you demo only opc-ua
+6. Access node-red service, it should be available at port 31880 of your worker node e.g. http://192.168.50.200:31880
+7. enjoy!
 
 ![image](https://github.com/user-attachments/assets/f8d24918-d1cd-4908-bf8c-b4657622af96)
 
