@@ -32,3 +32,6 @@ Simulating real-world operational technology scenarios that onsite operators dea
 
 ![image](https://github.com/user-attachments/assets/6f93858c-f850-4157-9209-57b13812c182)
 
+![image](https://github.com/user-attachments/assets/e81d7d67-017f-4721-8073-6cf4481995c2)
+
+![Screenshot 2024-10-08 at 10 10 25](https://github.com/user-attachments/assets/37902981-6892-416d-9a65-f35819e73d05)
