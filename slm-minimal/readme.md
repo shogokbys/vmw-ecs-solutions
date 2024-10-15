@@ -8,7 +8,11 @@ This repository contains configuration files to deploy and demonstrate of minima
 - **llm-frontend.yaml**: SLM frontend application to provide GUI interaction for the users
 - **ec-worker.yaml**: Since SLM requires decent amount of RAM, the worker node needs to be updated - 16-24GB should work fine as well
 
-## Purpose
+## What SLM(Small Language Model) means in manufacturing?
+
+Traditional AI in manufacturing often relies on task-specific machine learning models that focus on individual functions like predictive maintenance, anomaly detection, or process optimization. These models are typically designed for narrow applications and require separate models for each task, which can be rigid and lack flexibility.
+
+Small Language Models (SLMs), on the other hand, are more versatile. While smaller, they can handle various language-related tasks—such as interpreting operator commands, generating insights from reports, and facilitating human-machine interaction—within a single model. SLMs bring flexibility and adaptability to edge deployments, allowing manufacturers to streamline multiple tasks with a unified AI, reducing the need for separate, specialized systems.
 
 ## Getting Started
 
