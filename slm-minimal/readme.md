@@ -17,4 +17,7 @@ This repository contains configuration files to deploy and demonstrate of minima
 3. Access the frontend via http://<worker-node>:30850
 4. enjoy!
 
+<img width="1023" alt="Screenshot 2024-10-15 at 9 47 20" src="https://github.com/user-attachments/assets/4dc78f2c-1fe2-4e31-84bc-6b291a096dd5">
+
+<img width="1018" alt="Screenshot 2024-10-15 at 9 48 30" src="https://github.com/user-attachments/assets/bc495f9e-7a8b-4c1b-958b-16897e126410">
 
