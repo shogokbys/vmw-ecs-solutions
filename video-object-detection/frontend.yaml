@@ -44,5 +44,5 @@ spec:
             - containerPort: 8501
               protocol: TCP
           env:
-            - name: LLM_HOST
+            - name: BACKEND_URL
               value: objdetect-backend.objdetect.svc.cluster.local:8000
