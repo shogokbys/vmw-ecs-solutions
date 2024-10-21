@@ -18,3 +18,8 @@ ToBeUpdated
 2. Depending on the timing, the host restart might be required to reflect the changes made on ec-worker
 3. Access the frontend via `http://<worker-node>:30850`
 4. enjoy!
+
+
+
+https://github.com/user-attachments/assets/7ecfafb2-37ff-47d8-bea0-068dcdba9d39
+
