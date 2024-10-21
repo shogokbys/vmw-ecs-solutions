@@ -45,4 +45,4 @@ spec:
               protocol: TCP
           env:
             - name: BACKEND_URL
-              value: objdetect-backend.objdetect.svc.cluster.local:8000
+              value: http://objdetect-backend.objdetect.svc.cluster.local:8000
