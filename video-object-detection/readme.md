@@ -19,7 +19,6 @@ ToBeUpdated
 3. Access the frontend via `http://<worker-node>:30850`
 4. enjoy!
 
-
-
 https://github.com/user-attachments/assets/7ecfafb2-37ff-47d8-bea0-068dcdba9d39
 
+![Screen Recording 2024-10-21 at 16 31 55 (1)](https://github.com/user-attachments/assets/e3cee224-ad19-4f18-b105-e2937bbf3bdc)
