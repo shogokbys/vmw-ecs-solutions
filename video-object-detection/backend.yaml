@@ -1,0 +1,51 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: objdetect
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: objdetect-backend
+  name: objdetect-backend
+  namespace: objdetect
+spec:
+  ports:
+    - name: "8000"
+      port: 8000
+      protocol: TCP
+      targetPort: 8000
+      nodePort: 30800
+  selector:
+    app: objdetect-backend
+  sessionAffinity: None
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: objdetect-backend
+  name: objdetect-backend
+  namespace: objdetect
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: objdetect-backend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: objdetect-backend
+    spec:
+      containers:
+        - image: shogokobayashi/demo-objdetect-backend-yolov8n
+          imagePullPolicy: Always
+          name: objdetect-backend
+          ports:
+            - containerPort: 8000
+              protocol: TCP
+          resources: {}
