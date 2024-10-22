@@ -1,14 +1,15 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: win10jp-modified
+  name: win2022
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
 spec:
   className: best-effort-small
-  #http or https location of OVA without the prefix:
-  imageName: ent.box.com/shared/static/7tpkzdl797pn4ty0e30yzaxsgkavj2gc.ova
+  # http or https location of OVA without the prefix:
+  # imageName: ent.box.com/shared/static/7tpkzdl797pn4ty0e30yzaxsgkavj2gc.ova # win10jp
+  imageName: ent.box.com/shared/static/5h3zcyattwgoyt7crgakwdcreiviegpp.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
