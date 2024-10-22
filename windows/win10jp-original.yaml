@@ -8,7 +8,7 @@ metadata:
 spec:
   className: best-effort-large
   #http or https location of OVA without the prefix:
-  imageName: ent.box.com/shared/static/xxxxxxx.ova
+  imageName: ent.box.com/shared/static/yin0syvnkvmjnlcbrcsg9o4ujzcbjv46.ova
   powerState: poweredOn
   networkInterfaces:
   - networkName: "VM Network"
