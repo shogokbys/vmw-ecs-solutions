@@ -27,7 +27,7 @@ metadata:
   namespace: default
 stringData:
   unattend: |
-  <?xml version="1.0" encoding="utf-8"?>
+    <?xml version="1.0" encoding="utf-8"?>
     <unattend xmlns="urn:schemas-microsoft-com:unattend">
         <settings pass="oobeSystem">
             <!-- Change Administrator Password -->
