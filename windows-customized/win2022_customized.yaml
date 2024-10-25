@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: win2022pa
+  name: win2022pa2
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
@@ -12,9 +12,11 @@ spec:
   # imageName: ent.box.com/shared/static/5h3zcyattwgoyt7crgakwdcreiviegpp.ova # win2022 original
   imageName: ent.box.com/shared/static/qtxzu2fv3jm2fcfest0wwd1gcnf3v8b6.ova # win2022 with pa
   powerState: poweredOn
-  vmMetadata:
-    secretName: sysprep-bootstrap-data
-    transport: Sysprep
+  bootstrap:
+    sysprep:
+      rawSysprep:
+        name: sysprep-bootstrap-data
+        key: unattend
   networkInterfaces:
   - networkName: "VM Network"
     ethernetCardType: "vmxnet3"
