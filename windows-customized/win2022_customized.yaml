@@ -1,7 +1,7 @@
 apiVersion: vmoperator.vmware.com/v1alpha1
 kind: VirtualMachine
 metadata:
-  name: win2022pa3
+  name: win2022pa4
   namespace: default
   annotations:
     vmoperator.vmware.com/image-supported-check: disable
