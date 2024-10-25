@@ -1,4 +1,4 @@
-apiVersion: vmoperator.vmware.com/v1alpha1
+apiVersion: vmoperator.vmware.com/v1alpha2
 kind: VirtualMachine
 metadata:
   name: win2022pa2
