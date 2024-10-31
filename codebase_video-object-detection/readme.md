@@ -13,3 +13,7 @@ The application consists of two main components:
 
 The backend automatically detects if CUDA is available and utilises GPU acceleration if possible. If CUDA is not available, it defaults to CPU processing.
 
+
+
+https://github.com/user-attachments/assets/a4935a0f-df44-4342-8d2e-2b50e222c9d5
+
