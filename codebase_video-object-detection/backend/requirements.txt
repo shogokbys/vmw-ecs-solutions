@@ -1,0 +1,17 @@
+# FastAPI for backend API
+fastapi[all]
+uvicorn
+
+# YOLOv8 and PyTorch (CUDA-enabled if GPU available)
+ultralytics
+torch
+torchvision
+
+# OpenCV for image processing
+opencv-python-headless
+
+# Image handling and processing
+pillow
+
+# Additional dependencies for handling uploads and paths
+numpy

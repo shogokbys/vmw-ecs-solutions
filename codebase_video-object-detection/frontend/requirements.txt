@@ -1,0 +1,11 @@
+# Streamlit for frontend
+streamlit
+
+# Requests for API communication
+requests
+
+# Image handling
+pillow
+
+# OpenCV for frame processing (only if needed for handling video frames on frontend)
+opencv-python-headless
