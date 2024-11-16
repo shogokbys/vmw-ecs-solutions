@@ -286,23 +286,6 @@
         "wires": []
     },
     {
-        "id": "58c31fb8fd8cd7a5",
-        "type": "debug",
-        "z": "99d3ebc93ec98190",
-        "name": "Temperature",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 220,
-        "wires": []
-    },
-    {
         "id": "64971cef156a3a52",
         "type": "inject",
         "z": "99d3ebc93ec98190",
@@ -327,52 +310,7 @@
         "y": 220,
         "wires": [
             [
-                "865c222e0756d33d"
-            ]
-        ]
-    },
-    {
-        "id": "d6b041f6caca62a8",
-        "type": "debug",
-        "z": "99d3ebc93ec98190",
-        "name": "Pressure",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "0ed5422bbcf1c9fb",
-        "type": "inject",
-        "z": "99d3ebc93ec98190",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "60",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 190,
-        "y": 400,
-        "wires": [
-            [
+                "865c222e0756d33d",
                 "b7d41e8ad4a928da"
             ]
         ]
@@ -412,7 +350,7 @@
         "value": "",
         "name": "",
         "x": 420,
-        "y": 400,
+        "y": 380,
         "wires": [
             [
                 "e5b30b3ceaed93af"
@@ -440,11 +378,10 @@
         "receiveBufferSize": 8192,
         "sendBufferSize": 8192,
         "name": "",
-        "x": 700,
+        "x": 640,
         "y": 220,
         "wires": [
             [
-                "58c31fb8fd8cd7a5",
                 "756ebecb31a60117"
             ],
             [],
@@ -472,32 +409,15 @@
         "receiveBufferSize": 8192,
         "sendBufferSize": 8192,
         "name": "",
-        "x": 700,
-        "y": 400,
+        "x": 640,
+        "y": 380,
         "wires": [
             [
-                "d6b041f6caca62a8",
                 "e8ff5dca37826269"
             ],
             [],
             []
         ]
-    },
-    {
-        "id": "43cf2364018c4f8c",
-        "type": "debug",
-        "z": "99d3ebc93ec98190",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 940,
-        "y": 300,
-        "wires": []
     },
     {
         "id": "1de228893cea4c92",
@@ -509,12 +429,10 @@
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 690,
-        "y": 300,
+        "x": 1150,
+        "y": 560,
         "wires": [
-            [
-                "43cf2364018c4f8c"
-            ]
+            []
         ]
     },
     {
@@ -528,45 +446,11 @@
         "syntax": "mustache",
         "template": "INSERT INTO devicestatus (devicename, devicevalue) VALUES ('tempsensor',{{payload}});",
         "output": "str",
-        "x": 420,
-        "y": 300,
+        "x": 860,
+        "y": 220,
         "wires": [
             [
                 "1de228893cea4c92"
-            ]
-        ]
-    },
-    {
-        "id": "2baf53076c9f8a3a",
-        "type": "debug",
-        "z": "99d3ebc93ec98190",
-        "name": "debug 4",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 950,
-        "y": 500,
-        "wires": []
-    },
-    {
-        "id": "a525daeab08434b7",
-        "type": "postgresql",
-        "z": "99d3ebc93ec98190",
-        "name": "",
-        "query": "{{{msg.payload}}}",
-        "postgreSQLConfig": "803dfbf7f7e9d2f1",
-        "split": false,
-        "rowsPerMsg": 1,
-        "outputs": 1,
-        "x": 710,
-        "y": 500,
-        "wires": [
-            [
-                "2baf53076c9f8a3a"
             ]
         ]
     },
@@ -581,11 +465,11 @@
         "syntax": "mustache",
         "template": "INSERT INTO devicestatus (devicename, devicevalue) VALUES ('pressuresensor',{{payload}});",
         "output": "str",
-        "x": 430,
-        "y": 500,
+        "x": 860,
+        "y": 380,
         "wires": [
             [
-                "a525daeab08434b7"
+                "1de228893cea4c92"
             ]
         ]
     }
