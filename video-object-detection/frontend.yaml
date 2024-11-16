@@ -37,7 +37,7 @@ spec:
         app: objdetect-frontend
     spec:
       containers:
-        - image: shogokobayashi/demo-objdetect-frontend
+        - image: shogokobayashi/demo-objdetect-frontend-rtsp
           imagePullPolicy: Always
           name: objdetect-frontend
           ports:
