@@ -42,7 +42,7 @@ spec:
         app: objdetect-backend
     spec:
       containers:
-        - image: shogokobayashi/demo-objdetect-backend-yolov8n
+        - image: shogokobayashi/demo-objdetect-backend-rtsp
           imagePullPolicy: Always
           name: objdetect-backend
           ports:
