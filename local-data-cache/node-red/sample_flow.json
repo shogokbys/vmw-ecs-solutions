@@ -1,13 +1,13 @@
 [
     {
-        "id": "f6f2187d.f17ca8",
+        "id": "1c4a02e69dc1a133",
         "type": "tab",
-        "label": "Flow 1",
+        "label": "Check Postgresql ",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "e9e380c7db9836c8",
+        "id": "99d3ebc93ec98190",
         "type": "tab",
         "label": "OPC-UA Demo server",
         "disabled": false,
@@ -15,7 +15,7 @@
         "env": []
     },
     {
-        "id": "08ad5e8e15b8a066",
+        "id": "803dfbf7f7e9d2f1",
         "type": "postgreSQLConfig",
         "name": "",
         "host": "postgresql.db.svc.cluster.local",
@@ -40,7 +40,7 @@
         "passwordFieldType": "str"
     },
     {
-        "id": "6c6d98160d9e203c",
+        "id": "f904273510c93877",
         "type": "OpcUa-Endpoint",
         "endpoint": "opc.tcp://opc-ua.opc-ua.svc.cluster.local:4840/freeopcua/server/",
         "secpol": "None",
@@ -52,199 +52,9 @@
         "userprivatekey": ""
     },
     {
-        "id": "5d82bdbeefb27ef2",
-        "type": "modbus-client",
-        "name": "feed1",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.10",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "6ecd880978656db2",
-        "type": "modbus-client",
-        "name": "feed2",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.11",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "aad3ea31c39c9d55",
-        "type": "modbus-client",
-        "name": "purge-valve",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.12",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "03dd7a2f565044fb",
-        "type": "modbus-client",
-        "name": "tank",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.14",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "a0877f48ece96b8b",
-        "type": "modbus-client",
-        "name": "product-valve",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.13",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "3201ecda289c82c6",
-        "type": "modbus-client",
-        "name": "analyzer",
-        "clienttype": "tcp",
-        "bufferCommands": true,
-        "stateLogEnabled": false,
-        "queueLogEnabled": false,
-        "failureLogEnabled": true,
-        "tcpHost": "192.168.50.15",
-        "tcpPort": "502",
-        "tcpType": "DEFAULT",
-        "serialPort": "/dev/ttyUSB",
-        "serialType": "RTU-BUFFERD",
-        "serialBaudrate": "9600",
-        "serialDatabits": "8",
-        "serialStopbits": "1",
-        "serialParity": "none",
-        "serialConnectionDelay": "100",
-        "serialAsciiResponseStartDelimiter": "0x3A",
-        "unit_id": "1",
-        "commandDelay": "1",
-        "clientTimeout": "1000",
-        "reconnectOnTimeout": true,
-        "reconnectTimeout": "2000",
-        "parallelUnitIdsAllowed": true,
-        "showErrors": false,
-        "showWarnings": true,
-        "showLogs": true
-    },
-    {
-        "id": "3cc11d24.ff01a2",
-        "type": "comment",
-        "z": "f6f2187d.f17ca8",
-        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
-        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
-        "x": 350,
-        "y": 80,
-        "wires": []
-    },
-    {
-        "id": "86e077d91e179ea2",
+        "id": "274ca7c1864c8b32",
         "type": "inject",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "props": [
             {
@@ -262,18 +72,18 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 80,
-        "y": 240,
+        "x": 140,
+        "y": 140,
         "wires": [
             [
-                "386d16f8c354a4a0"
+                "0aa18bcb6b5a7443"
             ]
         ]
     },
     {
-        "id": "909ee68693d25c30",
+        "id": "f4af2d8b30446713",
         "type": "debug",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "debug 1",
         "active": true,
         "tosidebar": true,
@@ -282,32 +92,32 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 840,
-        "y": 240,
+        "x": 760,
+        "y": 140,
         "wires": []
     },
     {
-        "id": "386d16f8c354a4a0",
+        "id": "0aa18bcb6b5a7443",
         "type": "postgresql",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "query": "SELECT * FROM devicestatus;",
-        "postgreSQLConfig": "08ad5e8e15b8a066",
+        "postgreSQLConfig": "803dfbf7f7e9d2f1",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 450,
-        "y": 240,
+        "y": 140,
         "wires": [
             [
-                "909ee68693d25c30"
+                "f4af2d8b30446713"
             ]
         ]
     },
     {
-        "id": "fdb327e0a2c38996",
+        "id": "4a3cfe616fc316a2",
         "type": "inject",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "props": [
             {
@@ -321,18 +131,18 @@
         "topic": "",
         "payload": "{\"devicename\":\"mydevice2\",\"value\":987}",
         "payloadType": "json",
-        "x": 290,
-        "y": 380,
+        "x": 130,
+        "y": 360,
         "wires": [
             [
-                "d313f2d60878c142"
+                "1caedb4a4a1f986a"
             ]
         ]
     },
     {
-        "id": "b83516fc0d0fe46a",
+        "id": "19b9a7405cc0bcd0",
         "type": "debug",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "debug 2",
         "active": true,
         "tosidebar": true,
@@ -342,31 +152,31 @@
         "statusVal": "",
         "statusType": "auto",
         "x": 1020,
-        "y": 380,
+        "y": 360,
         "wires": []
     },
     {
-        "id": "565ca64dec820629",
+        "id": "3db1b1a2971d4caa",
         "type": "postgresql",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "query": "{{{msg.payload}}}",
-        "postgreSQLConfig": "08ad5e8e15b8a066",
+        "postgreSQLConfig": "803dfbf7f7e9d2f1",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 790,
-        "y": 380,
+        "x": 770,
+        "y": 360,
         "wires": [
             [
-                "b83516fc0d0fe46a"
+                "19b9a7405cc0bcd0"
             ]
         ]
     },
     {
-        "id": "d313f2d60878c142",
+        "id": "1caedb4a4a1f986a",
         "type": "template",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "field": "payload",
         "fieldType": "msg",
@@ -374,18 +184,18 @@
         "syntax": "mustache",
         "template": "INSERT INTO devicestatus (devicename, devicevalue) VALUES ('{{payload.devicename}}',{{payload.value}});",
         "output": "str",
-        "x": 540,
-        "y": 380,
+        "x": 440,
+        "y": 360,
         "wires": [
             [
-                "565ca64dec820629"
+                "3db1b1a2971d4caa"
             ]
         ]
     },
     {
-        "id": "d3b63aa1fd6b15db",
+        "id": "123d187836c75028",
         "type": "inject",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "props": [
             {
@@ -407,14 +217,14 @@
         "y": 480,
         "wires": [
             [
-                "55755d5ef9518992"
+                "7186e616e68b8750"
             ]
         ]
     },
     {
-        "id": "3059026a22aedb9a",
+        "id": "fdb1b67f8c2cdbd5",
         "type": "debug",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "debug 5",
         "active": true,
         "tosidebar": true,
@@ -423,32 +233,62 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 900,
+        "x": 760,
         "y": 480,
         "wires": []
     },
     {
-        "id": "55755d5ef9518992",
+        "id": "7186e616e68b8750",
         "type": "postgresql",
-        "z": "f6f2187d.f17ca8",
+        "z": "1c4a02e69dc1a133",
         "name": "",
         "query": "DELETE FROM devicestatus where timestamp < NOW() - INTERVAL '6 hours';",
-        "postgreSQLConfig": "08ad5e8e15b8a066",
+        "postgreSQLConfig": "803dfbf7f7e9d2f1",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
-        "x": 510,
+        "x": 450,
         "y": 480,
         "wires": [
             [
-                "3059026a22aedb9a"
+                "fdb1b67f8c2cdbd5"
             ]
         ]
     },
     {
-        "id": "c8e00165f989a060",
+        "id": "873efe81f772498f",
+        "type": "comment",
+        "z": "1c4a02e69dc1a133",
+        "name": "Show entries in postgresql",
+        "info": "",
+        "x": 170,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "29da45e9c7629f6a",
+        "type": "comment",
+        "z": "1c4a02e69dc1a133",
+        "name": "no use: inject test data for troubleshoot",
+        "info": "",
+        "x": 210,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "31973c1cf4ad0d84",
+        "type": "comment",
+        "z": "1c4a02e69dc1a133",
+        "name": "no use: delete entries older than 12 hours to keep the data just enough for demo",
+        "info": "",
+        "x": 340,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "58c31fb8fd8cd7a5",
         "type": "debug",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "Temperature",
         "active": true,
         "tosidebar": true,
@@ -463,9 +303,9 @@
         "wires": []
     },
     {
-        "id": "dd5d21dcba80b484",
+        "id": "64971cef156a3a52",
         "type": "inject",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "props": [
             {
@@ -487,14 +327,14 @@
         "y": 220,
         "wires": [
             [
-                "685310ca18d1a39a"
+                "865c222e0756d33d"
             ]
         ]
     },
     {
-        "id": "eece2922f2262aa3",
+        "id": "d6b041f6caca62a8",
         "type": "debug",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "Pressure",
         "active": true,
         "tosidebar": true,
@@ -509,9 +349,9 @@
         "wires": []
     },
     {
-        "id": "e7fb4749b5dbc39e",
+        "id": "0ed5422bbcf1c9fb",
         "type": "inject",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "props": [
             {
@@ -533,24 +373,24 @@
         "y": 400,
         "wires": [
             [
-                "4b97c07e72363910"
+                "b7d41e8ad4a928da"
             ]
         ]
     },
     {
-        "id": "336ae2061550f91c",
+        "id": "7880f5f10e01db7c",
         "type": "comment",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "OPC-UA Read",
-        "info": "",
+        "info": "This is to retrieve the data from sensors periodically and to feed that to postgresql.\nBy Default it is configured to collect/feed for two pre-configured sensors.\nTo add other sensors, copy the flow and change OPC-UA parameter accordingly.",
         "x": 180,
-        "y": 140,
+        "y": 100,
         "wires": []
     },
     {
-        "id": "685310ca18d1a39a",
+        "id": "865c222e0756d33d",
         "type": "OpcUa-Item",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "item": "ns=2;i=2",
         "datatype": "Int64",
         "value": "",
@@ -559,14 +399,14 @@
         "y": 220,
         "wires": [
             [
-                "9908670a2db92446"
+                "28c421aee6824599"
             ]
         ]
     },
     {
-        "id": "4b97c07e72363910",
+        "id": "b7d41e8ad4a928da",
         "type": "OpcUa-Item",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "item": "ns=2;i=4",
         "datatype": "Int64",
         "value": "",
@@ -575,15 +415,15 @@
         "y": 400,
         "wires": [
             [
-                "13f504cb23b2a3ac"
+                "e5b30b3ceaed93af"
             ]
         ]
     },
     {
-        "id": "9908670a2db92446",
+        "id": "28c421aee6824599",
         "type": "OpcUa-Client",
-        "z": "e9e380c7db9836c8",
-        "endpoint": "6c6d98160d9e203c",
+        "z": "99d3ebc93ec98190",
+        "endpoint": "f904273510c93877",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -604,17 +444,18 @@
         "y": 220,
         "wires": [
             [
-                "c8e00165f989a060",
-                "a377c6544a67dc22"
+                "58c31fb8fd8cd7a5",
+                "756ebecb31a60117"
             ],
+            [],
             []
         ]
     },
     {
-        "id": "13f504cb23b2a3ac",
+        "id": "e5b30b3ceaed93af",
         "type": "OpcUa-Client",
-        "z": "e9e380c7db9836c8",
-        "endpoint": "6c6d98160d9e203c",
+        "z": "99d3ebc93ec98190",
+        "endpoint": "f904273510c93877",
         "action": "read",
         "deadbandtype": "a",
         "deadbandvalue": 1,
@@ -635,16 +476,17 @@
         "y": 400,
         "wires": [
             [
-                "eece2922f2262aa3",
-                "2f67037fec87b026"
+                "d6b041f6caca62a8",
+                "e8ff5dca37826269"
             ],
+            [],
             []
         ]
     },
     {
-        "id": "200d526d6ba87d5d",
+        "id": "43cf2364018c4f8c",
         "type": "debug",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "debug 3",
         "active": true,
         "tosidebar": true,
@@ -658,12 +500,12 @@
         "wires": []
     },
     {
-        "id": "09209f1d844a12db",
+        "id": "1de228893cea4c92",
         "type": "postgresql",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "query": "{{{msg.payload}}}",
-        "postgreSQLConfig": "08ad5e8e15b8a066",
+        "postgreSQLConfig": "803dfbf7f7e9d2f1",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
@@ -671,14 +513,14 @@
         "y": 300,
         "wires": [
             [
-                "200d526d6ba87d5d"
+                "43cf2364018c4f8c"
             ]
         ]
     },
     {
-        "id": "a377c6544a67dc22",
+        "id": "756ebecb31a60117",
         "type": "template",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "field": "payload",
         "fieldType": "msg",
@@ -690,14 +532,14 @@
         "y": 300,
         "wires": [
             [
-                "09209f1d844a12db"
+                "1de228893cea4c92"
             ]
         ]
     },
     {
-        "id": "c968570e414cfd07",
+        "id": "2baf53076c9f8a3a",
         "type": "debug",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "debug 4",
         "active": true,
         "tosidebar": true,
@@ -711,12 +553,12 @@
         "wires": []
     },
     {
-        "id": "8784ec555f960df1",
+        "id": "a525daeab08434b7",
         "type": "postgresql",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "query": "{{{msg.payload}}}",
-        "postgreSQLConfig": "08ad5e8e15b8a066",
+        "postgreSQLConfig": "803dfbf7f7e9d2f1",
         "split": false,
         "rowsPerMsg": 1,
         "outputs": 1,
@@ -724,14 +566,14 @@
         "y": 500,
         "wires": [
             [
-                "c968570e414cfd07"
+                "2baf53076c9f8a3a"
             ]
         ]
     },
     {
-        "id": "2f67037fec87b026",
+        "id": "e8ff5dca37826269",
         "type": "template",
-        "z": "e9e380c7db9836c8",
+        "z": "99d3ebc93ec98190",
         "name": "",
         "field": "payload",
         "fieldType": "msg",
@@ -743,7 +585,7 @@
         "y": 500,
         "wires": [
             [
-                "8784ec555f960df1"
+                "a525daeab08434b7"
             ]
         ]
     }
