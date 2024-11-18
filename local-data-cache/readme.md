@@ -11,7 +11,8 @@ Youo can use this repository to quickly start visualizing OT in your factory wit
 * node-red.yaml: Configuration files for deploying the Node-RED container.
 * sample_flows.json: Sample Node-RED flow that can be imported into the Node-RED container to demonstrate typical sensor data flows.
 * postgresql.yaml:
-* grafana.yaml: 
+* grafana.yaml:
+* opcua-server.yaml: Configuration files for the demo opcua server to emulate the sensor readings.
 
 # Purpose
 This repository allows users to practice setting up and interacting with a simple OT environment. By following the provided configurations and using Node-RED, you will gain first-hand experience with:
@@ -36,3 +37,5 @@ Simulating real-world operational technology scenarios that onsite operators dea
 ![image](https://github.com/user-attachments/assets/e81d7d67-017f-4721-8073-6cf4481995c2)
 
 ![Screenshot 2024-10-08 at 10 10 25](https://github.com/user-attachments/assets/37902981-6892-416d-9a65-f35819e73d05)
+
+<img width="1578" alt="image" src="https://github.com/user-attachments/assets/92a2a8cb-ebff-4c28-bda4-528abd1700fa">
