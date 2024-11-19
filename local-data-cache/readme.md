@@ -39,3 +39,38 @@ Simulating real-world operational technology scenarios that onsite operators dea
 ![Screenshot 2024-10-08 at 10 10 25](https://github.com/user-attachments/assets/37902981-6892-416d-9a65-f35819e73d05)
 
 <img width="1578" alt="image" src="https://github.com/user-attachments/assets/92a2a8cb-ebff-4c28-bda4-528abd1700fa">
+
+# RabbitMQ Shovel
+
+This repo can also transfer IoT data to external locations using RabbitMQ shovel
+
+<img width="1199" alt="image" src="https://github.com/user-attachments/assets/7aa5ef74-8797-4741-aa84-100ec98ce8a4">
+
+To start transfering to external rabbitmq locations such as Amazon MQ, execute the following.
+
+```
+cat <<EOF | kubectl apply -f-
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: spring-opcua
+  name: shovel-destination
+stringData:
+  destinationUrl: "amqps://<username>:<password>@<host>:<port>?verify=verify_none"
+EOF
+```
+
+If you do not have an external rabbitmq, you can use the following which simply loop back to the edge rabbitmq
+
+```
+cat <<EOF | kubectl apply -f-
+kind: Secret
+apiVersion: v1
+metadata:
+  namespace: spring-opcua
+  name: shovel-destination
+stringData:
+  destinationUrl: "amqp://localhost"
+EOF
+```
+
