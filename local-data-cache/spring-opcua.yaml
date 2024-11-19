@@ -23,7 +23,7 @@ spec:
     spec:
       automountServiceAccountToken: false
       containers:
-        - image: ghcr.io/mhoshi-vm/spring-opc-ua-demo:20241119.49.20253@sha256:d796c5ee3bdc56140f120fe385c69c684c2ceff95783ddb84e992ed570a73a95
+        - image: ghcr.io/mhoshi-vm/spring-opc-ua-demo:20241119.539.39309@sha256:1f0879f6c9307825950c52f4647064c806a04f47922b961778deb7f2404bafc5
           imagePullPolicy: IfNotPresent
           name: main
           ports:
@@ -35,10 +35,11 @@ spec:
             value: opc-ua.opc-ua
           - name: RABBITMQ_SHOVEL_CLIENT_CLIENTURL
             value: http://rabbitmq.rabbitmq:15672/api
-          - name: RABBITMQ_SHOVEL_CLIENT_SOURCEURL
-            value: amqp://rabbitmq.rabbitmq
-          - name: RABBITMQ_SHOVEL_CLIENT_DESTINATIONURL
-            value: amqp://rabbitmq.rabbitmq
+          - name: RABBITMQ_SHOVEL_CLIENT_DESTINATIONURI
+            valueFrom:
+              secretKeyRef:
+                key: destinationUrl
+                name: shovel-destination
           - name: SPRING_RABBITMQ_HOST
             value: rabbitmq.rabbitmq
           resources:
