@@ -1,0 +1,71 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: spring-opcua
+  labels:
+    pod-security.kubernetes.io/enforce: privileged
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-opcua-demo
+  namespace: spring-opcua
+spec:
+  selector:
+    matchLabels:
+      containerapp.apps.tanzu.vmware.com/app-name: spring-opcua-demo
+  template:
+    metadata:
+      annotations:
+        kubectl.kubernetes.io/default-container: main
+      labels:
+        containerapp.apps.tanzu.vmware.com/app-name: spring-opcua-demo
+    spec:
+      automountServiceAccountToken: false
+      containers:
+        - image: ghcr.io/mhoshi-vm/spring-opc-ua-demo:20241119.49.20253@sha256:d796c5ee3bdc56140f120fe385c69c684c2ceff95783ddb84e992ed570a73a95
+          imagePullPolicy: IfNotPresent
+          name: main
+          ports:
+            - containerPort: 8080
+              name: main
+              protocol: TCP
+          env:
+          - name: OPCUA_ENDPOINT_URL
+            value: opc-ua.opc-ua
+          - name: RABBITMQ_SHOVEL_CLIENT_CLIENTURL
+            value: http://rabbitmq.rabbitmq:15672/api
+          - name: RABBITMQ_SHOVEL_CLIENT_SOURCEURL
+            value: amqp://rabbitmq.rabbitmq
+          - name: RABBITMQ_SHOVEL_CLIENT_DESTINATIONURL
+            value: amqp://rabbitmq.rabbitmq
+          - name: SPRING_RABBITMQ_HOST
+            value: rabbitmq.rabbitmq
+          resources:
+            limits:
+              memory: 1Gi
+            requests:
+              cpu: 300m
+              memory: 1Gi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+                - ALL
+            privileged: false
+            readOnlyRootFilesystem: true
+            runAsNonRoot: true
+            seccompProfile:
+              type: RuntimeDefault
+          volumeMounts:
+            - mountPath: /tmp
+              name: tanzu-tmp
+      enableServiceLinks: false
+      restartPolicy: Always
+      securityContext:
+        runAsNonRoot: true
+        seccompProfile:
+          type: RuntimeDefault
+      volumes:
+        - emptyDir: {}
+          name: tanzu-tmp
