@@ -16,11 +16,10 @@ spec:
       port: 1880
       protocol: TCP
       targetPort: 1880
-      nodePort: 31880
   selector:
     app: node-red
   sessionAffinity: None
-  type: NodePort
+  type: LoadBalancer
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -41,6 +40,8 @@ spec:
       labels:
         app: node-red
     spec:
+      securityContext:
+        fsGroup: 1000
       containers:
         - image: nodered/node-red
           imagePullPolicy: Always
@@ -56,3 +57,23 @@ spec:
               value: "1000"
             - name: PUID
               value: "1000"
+          volumeMounts:
+          - name: nodered-storage
+            mountPath: /data
+      volumes:
+      - name: nodered-storage
+        persistentVolumeClaim:
+          claimName: nodered-pvc
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: nodered-pvc
+  namespace: node-red
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: vsan-esa-default-policy-raid5
